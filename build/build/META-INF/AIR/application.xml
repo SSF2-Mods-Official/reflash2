@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<application xmlns="http://ns.adobe.com/air/application/32.0">
+  <id>com.mcleodgaming.ssf2</id>
+  <versionNumber>001.400.001</versionNumber>
+  <filename>Super Smash Flash 2 Beta</filename>
+  <description>Duke it out as your favorite Nintendo characters in this fan-made tribute to the Super Smash Bros. franchise. Now fully decompiled in Adobe Animate for SSF2 version 1.4.0.1!</description>
+  <name>Super Smash Flash 2 Beta</name>
+  <copyright>2025</copyright>
+  <initialWindow>
+    <content>SSF2.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <fullScreen>false</fullScreen>
+    <aspectRatio>portrait</aspectRatio>
+    <renderMode>auto</renderMode>
+    <maximizable>true</maximizable>
+    <minimizable>true</minimizable>
+    <resizable>false</resizable>
+  </initialWindow>
+  <icon>
+    <image128x128>icons/SSF2128.png</image128x128></icon>
+  <architecture>64</architecture>
+  <customUpdateUI>false</customUpdateUI>
+  <allowBrowserInvocation>false</allowBrowserInvocation>
+  <supportedProfiles>extendedDesktop </supportedProfiles>
+  
+  <extensions>
+    <extensionID>com.iam2bam.ane.nativejoystick</extensionID>
+    <extensionID>com.jotard.ane.DiscordANE</extensionID>
+  </extensions>
+</application>

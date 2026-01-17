@@ -1,0 +1,5 @@
+If you're getting a black screen or a strange 3500 error upon opening the game, it's because you're missing some dependencies that allows the Discord Rich Presence feature to work properly.
+
+Please run VC_redist.x64.exe from the "install" folder to resolve the issue.
+
+Alternatively, you can get it straight from Microsoft: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist

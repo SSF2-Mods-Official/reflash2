@@ -1,0 +1,20 @@
+<extension xmlns="http://ns.adobe.com/air/extension/32.0">
+  <id>com.jotard.ane.DiscordANE</id>
+  <versionNumber>1.0.0</versionNumber>
+  <platforms>
+    <platform name="Windows-x86">
+      <applicationDeployment>
+        <nativeLibrary>DiscordSDK.dll</nativeLibrary>
+        <initializer>DiscordGameSDKExtensionInitializer</initializer>
+        <finalizer>DiscordGameSDKExtensionFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="Windows-x86-64">
+      <applicationDeployment>
+        <nativeLibrary>DiscordSDK64.dll</nativeLibrary>
+        <initializer>DiscordGameSDKExtensionInitializer</initializer>
+        <finalizer>DiscordGameSDKExtensionFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+  </platforms>
+</extension>
