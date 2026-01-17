@@ -24,6 +24,11 @@ The ModAPI is a custom, community-driven featureset for modded content that goes
 The source code and documentation for the Mod API class is available in `/src/`. One version of it is what's included in the engine that's compiled for ReFlash2, and the other is a stub version of the API meant to be compiled alongside modded content.
 
 
+# Downloads
+**For players**: Just get the zipped copy from the [Releases](https://github.com/stariwinkle/reflash2/releases).
+**For developers**: Clone the repository.
+
+
 ## Want to contribute?
 Please reach out via the official [SSF2 Mods Discord](https://discord.gg/yVPkqKQsx2) and review the [ModAPI Contributor Guidelines](src/docs/MODAPI_CONTRIBUTOR_GUIDELINES.md).
 
