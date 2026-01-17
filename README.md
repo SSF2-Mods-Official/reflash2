@@ -26,6 +26,7 @@ The source code and documentation for the Mod API class is available in `/src/`.
 
 # Downloads
 **For players**: Just get the zipped copy from the [Releases](https://github.com/stariwinkle/reflash2/releases).
+
 **For developers**: Clone the repository.
 
 
