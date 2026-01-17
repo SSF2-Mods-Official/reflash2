@@ -16,10 +16,11 @@ The **SSF2 Mod API** is a community-maintained utility surface for Super Smash F
 
 ## Quick Start for Asset Developers
 
+- First, ensure that you've included the `ModAPI` class a library via the ActionScript Settings in Adobe Animate. It's typically looking for a folder, so you could place the .as file in a folder and then link that folder to the libraries section.
+
 ```actionscript
-package my.custom.character
+package
 {
-    import com.mcleodgaming.ssf2.modapi.ModAPI;
 
     public class MyCustomChar extends SSF2CharacterExt
     {
