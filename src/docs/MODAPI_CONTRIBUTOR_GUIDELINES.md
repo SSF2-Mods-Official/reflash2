@@ -2,7 +2,8 @@
 
 ## Overview
 
-The **SSF2 Mod API** (`ModAPI`) is a small, utility-focused surface that ships with the IDK. It is independent of `SSF2API` and intentionally limited to maintained helpers (music fades, pitch-shifted SFX, time manipulators, debug output).
+The **SSF2 Mod API** (`ModAPI`) is a small, utility-focused surface that ships with the IDK. It is independent of `SSF2API` and intentionally limited to maintained helpers (music fades, pitch-shifted SFX, controller rumble, time manipulators, debug output).
+
 ## Core Principles
 
 1. **Independence**: ModAPI never modifies SSF2API; calls remain clearly distinct.
@@ -20,12 +21,13 @@ if (!ModAPI.isReady())
 }
 
 ModAPI.playMusicWithFadeOut("bgm_menu", 90000, 2500);
-ModAPI.stopTime(self.getUID(), 60, 2, 1);
+ModAPI.stopTime(this, 60, 2, 1);
+ModAPI.rumbleController(this, 0.6, 0.4, 150);
 ```
 
 ## What Contributions Are In Scope
 
-- Bug fixes to existing helpers (music fade, pitch shift, time stop/freeze, debug output)
+- Bug fixes to existing helpers (music fade, pitch shift, controller rumble, time stop/freeze, debug output)
 - Documentation updates that reflect actual behavior and parameters
 - Safety/guard improvements (null checks, bounds checks, error messages)
 - Compatibility fixes to keep ModAPI aligned with engine changes
@@ -43,15 +45,18 @@ ModAPI.stopTime(self.getUID(), 60, 2, 1);
 - Gate all behavior with `ModAPI.isReady()`; return early on failure.
 - Use `getEngineAPI()` only when strictly necessary; guard nulls before use.
 - Keep debug output routed through `ModAPI.print()` and minimal in volume.
-- For time manipulators, validate UIDs and reject invalid priorities/buffer values.
-- For audio helpers, keep pitch values within documented ranges and handle missing sounds gracefully.
+- For time manipulators, validate characters/UIDs and reject invalid priorities/buffer values. Note that `applyTimeFreeze`/`removeTimeFreeze` no-op when a time stop is active (`_api.InTimeStop`).
+- For audio helpers, keep pitch values within documented ranges (0.05–3.0) and handle missing sounds gracefully.
+- For rumble helpers, resolve character-to-controller mapping gracefully; non-player characters silently no-op.
 - Update `VERSION_REVISION` (or higher) and the changelog when behavior changes.
 
 ## Testing Checklist
 
 - Music fades: start, mid-song trigger, and end-of-song trigger paths
 - Pitch-shifted SFX: play, live pitch updates, volume updates, stop, and state checks
-- Time manipulators: stop/resume, freeze/unfreeze, priority and buffer edge cases
+- Controller rumble: rumble start/stop, supportsRumble check, global enable/disable, non-player character handling
+- Menu rumble: triggerMenuRumble with valid/invalid controller indices, stopMenuRumble
+- Time manipulators: stop/resume, freeze/unfreeze, priority and buffer edge cases, freeze during active time stop
 - Ready-state guards: ensure calls safely no-op when ModAPI is not initialized
 
 ## Documentation Expectations
@@ -64,7 +69,7 @@ ModAPI.stopTime(self.getUID(), 60, 2, 1);
 
 - Read `ModAPI.as` for the source of truth on available helpers and defaults.
 - Use `SSF2API` documentation for engine context when needed.
-- Reach out in the [SSF2 Mods Discord](https://discord.gg/yVPkqKQsx2)m if behavior needs clarification.
+- Reach out in the [SSF2 Mods Discord](https://discord.gg/yVPkqKQsx2) if behavior needs clarification.
 
 ---
 

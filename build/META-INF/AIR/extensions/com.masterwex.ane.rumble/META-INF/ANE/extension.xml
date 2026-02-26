@@ -1,0 +1,20 @@
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+  <id>com.masterwex.ane.rumble</id>
+  <versionNumber>1.0.0</versionNumber>
+  <platforms>
+    <platform name="Windows-x86">
+      <applicationDeployment>
+        <nativeLibrary>RumbleANE.dll</nativeLibrary>
+        <initializer>FREExtensionInitializer</initializer>
+        <finalizer>FREExtensionFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="Windows-x86-64">
+      <applicationDeployment>
+        <nativeLibrary>RumbleANE64.dll</nativeLibrary>
+        <initializer>FREExtensionInitializer</initializer>
+        <finalizer>FREExtensionFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+  </platforms>
+</extension>

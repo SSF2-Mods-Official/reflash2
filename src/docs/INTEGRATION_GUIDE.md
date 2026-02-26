@@ -234,9 +234,9 @@ ModAPI integrates non-invasively:
 
 ## Performance Impact
 
-- **Initialization**: < 1ms (feature registration only)
+- **Initialization**: < 1ms (state assignment only)
 - **Runtime**: 0ms when features unused
-- **Memory**: ~1KB for registry + feature-specific usage
+- **Memory**: Minimal — static class with no persistent allocations beyond active effects
 - **Deinitialization**: < 1ms (cleanup only)
 
 ## Debugging Integration

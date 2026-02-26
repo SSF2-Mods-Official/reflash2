@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.16.1" build="20171115" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_e9572afe4d82071942adb2561ec0e4807660c37b76de454363c5ca3b35cdc3e8_flash_display_Sprite" mod="1768712339088" signatureChecksum="984906289" >
+        <def id="_e9572afe4d82071942adb2561ec0e4807660c37b76de454363c5ca3b35cdc3e8_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+        <dep id="AS3" type="n" /> 
+      </script>
+      <script name="com/masterwex/ane/rumble/Rumble" mod="1768712327811" signatureChecksum="1574796570" >
+        <def id="com.masterwex.ane.rumble:Rumble" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Object" type="i" /> 
+        <dep id="AS3" type="n" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="828bd6140da816597159229b8e18ce9d2953c3a17c5cac4030baef15e64b53eb"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

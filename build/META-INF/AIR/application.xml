@@ -28,5 +28,6 @@
   <extensions>
     <extensionID>com.iam2bam.ane.nativejoystick</extensionID>
     <extensionID>com.jotard.ane.DiscordANE</extensionID>
+    <extensionID>com.masterwex.ane.rumble</extensionID>
   </extensions>
 </application>
