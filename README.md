@@ -12,6 +12,7 @@ If anyone wishes to independently inspect the security of this build for any rea
 ### Quality of Life
 - Discord Rich Presence: If you run the game while Discord is open (and your settings allow for it), the game will pass detailed status information to your profile about what menu you're on, selected character/stage, current mode, and more. When you host a room in Online Mode, you can even invite players to your lobby via Discord chat. (For this to work, they must also be playing on a copy of ReFlash2.)
 - Controller Rumble: Self-explanatory. Feel your controller vibrate when you attack, get hurt, or peform a variety of other actions. (For DualSense controllers, you need to be running [DS4Windows](https://github.com/schmaldeo/DS4Windows) in order for the rumble to work.)
+- Costume Manager: Create and manage custom palette swap data on a per-character basis, right from within the game. Accessible via Vault.
 
 ### Quality of Modding
 - All .ssf files have their original, unencrypted names, making it easy to identify which file is responsible for what.
